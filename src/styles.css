@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #121410;
+  --color-olive: #24352c;
+  --color-olive-deep: #1a241e;
+  --color-panel: #1c261f;
+  --color-cream: #e6dcc8;
+  --color-cream-dim: #cbbfa6;
+  --color-crimson: #9a2b2b;
+  --color-crimson-deep: #6e1c1c;
+  --color-brass: #8a7a5c;
+  --color-line: #3d4a40;
+  --color-ok: #6e8b6e;
+  --color-warn: #b08948;
+  --font-display: "Barlow Condensed", "Arial Narrow", "Trebuchet MS", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    margin: 0;
+    min-height: 100%;
+    background: var(--color-ink);
+    color: var(--color-cream);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .e101-stage {
+    position: relative;
+    width: min(100vw, calc(100dvh * 0.6));
+    height: min(100dvh, calc(100vw * 1.66667));
+    max-width: 100vw;
+    max-height: 100dvh;
+    overflow: hidden;
+    background: var(--color-ink);
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .e101-hud {
+    position: absolute;
+    inset: 0;
+    width: 240px;
+    height: 400px;
+    transform-origin: top left;
+    pointer-events: none;
+    font-family: var(--font-display);
+    color: var(--color-cream);
+  }
+
+  .e101-hud * {
+    pointer-events: auto;
+  }
+
+  .e101-hud button {
+    font-family: var(--font-display);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 0;
+  }
+
+  .e101-scan {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgb(18 20 16 / 0.08) 0px,
+      rgb(18 20 16 / 0.08) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    mix-blend-mode: multiply;
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .e101-hud,
+  .e101-hud * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "ACES 400",
+      "hasCanvas": true,
+      "bodyTextLen": 172,
+      "bodyTextHash": "3c5f99002637e6a818515fd4e939052c67d2fce97930f7b6a342e4e41b98900a",
+      "bodyTextPrefix": "240×400 · BETOUCH E101 ACES 400 Combate aéreo clásico. Biplanos ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "ACES 400",
+      "hasCanvas": true,
+      "bodyTextLen": 172,
+      "bodyTextHash": "3c5f99002637e6a818515fd4e939052c67d2fce97930f7b6a342e4e41b98900a",
+      "bodyTextPrefix": "240×400 · BETOUCH E101 ACES 400 Combate aéreo clásico. Biplanos ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
